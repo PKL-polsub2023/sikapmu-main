@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\m_user;
@@ -36,7 +36,7 @@ class RegisterController extends Controller
         ]);
         $data = ['nama' => $request->name,
                  'username' => $request->username,
-                 'password' => $request->password,
+                 'password' => Hash::make($request->password),
                  'email' => $request->email,
                  'kontak' => $request->kontak,
                  'role' => $request->role,];
