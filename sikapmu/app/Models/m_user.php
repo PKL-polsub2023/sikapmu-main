@@ -26,4 +26,19 @@ class m_user extends Model
     {
         DB::table('users')->where('id', $id)->delete();
     }
+
+    public function allData()
+    {
+        return DB::table('users')->whereNot('role', "Admin")->get();
+    }
+
+    public function detailData($id)
+    {
+        DB::table('users')->where('id', $id)->first();
+    }
+
+    public function checkID()
+    {
+        return DB::table('users')->max('id');
+    }
 }
