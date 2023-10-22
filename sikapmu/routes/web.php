@@ -104,3 +104,15 @@ Route::group(['middleware' => 'auth'], function () {
 	})->name('addberita');
 });
 
+
+
+// DATA WIRAUSAHA MUDA ADMIN
+Route::controller(c_wiramuda::class)->group(function () {
+    Route::get('wiramuda', 'index')->name('wiramuda.index');
+    Route::get('wiramuda/create', 'create')->name('wiramuda.create');
+    Route::post('wiramuda/store', 'store')->name('wiramuda.store');
+    Route::get('wiramuda/edit/{id}', 'edit')->name('wiramuda.edit');
+	Route::post('wiramuda/update', 'update')->name('wiramuda.update');
+});
+
+// END DATA WIRAUSAHA MUDA ADMIN
