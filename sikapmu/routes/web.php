@@ -22,6 +22,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
 
+use App\Http\Controllers\Admin\c_wiramuda;
+use App\Http\Controllers\Wiramuda\c_bio;
 
 Route::get('/', function () {return redirect('sign-in');})->middleware('guest');
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
@@ -112,7 +114,16 @@ Route::controller(c_wiramuda::class)->group(function () {
     Route::get('wiramuda/create', 'create')->name('wiramuda.create');
     Route::post('wiramuda/store', 'store')->name('wiramuda.store');
     Route::get('wiramuda/edit/{id}', 'edit')->name('wiramuda.edit');
-	Route::post('wiramuda/update', 'update')->name('wiramuda.update');
+	Route::post('wiramuda/update/{id}', 'update')->name('wiramuda.update');
+	Route::get('wiramuda/verifikasi/{id}', 'verifikasi')->name('wiramuda.verifikasi');
 });
 
 // END DATA WIRAUSAHA MUDA ADMIN
+
+
+// WIRAUSAHA MUDA
+Route::controller(c_bio::class)->group(function () {
+    Route::get('wiramuda/bio', 'index')->name('wiramuda.bio');
+});
+
+// END WIRAUSAHA MUDA

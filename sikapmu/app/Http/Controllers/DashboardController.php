@@ -3,11 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class DashboardController extends Controller
 {
     public function index()
     {
-        return view('dashboard.index');
+        $user = Auth::user();
+        if ($user->role === 'Admin') {
+            // Perform actions for admin role
+            return view('Admin.dashboard');
+        } elseif ($user->role === 'Wirausaha Muda') {
+            // Perform actions for user role
+            return view('Wiramuda.dashboard');
+        } else {
+            // Handle other roles or cases
+            return view('dashboard');
+        }
     }
 }

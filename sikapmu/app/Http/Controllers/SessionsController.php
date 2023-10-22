@@ -31,10 +31,13 @@ class SessionsController extends Controller
         }
 
         session()->regenerate();
+        $user = auth()->user();
 
         return redirect('/dashboard');
 
+
     }
+
 
     public function show(){
         request()->validate([

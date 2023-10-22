@@ -86,117 +86,134 @@
                 <span class="nav-link-text ms-1">Dashboard</span>
             </a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-white {{ $activePage == 'DataWiraMuda' ? ' active-page' : '' }} "
-                href="{{ route('DataWiraMuda') }}">
-                <div class="card {{ $activePage == 'DataWiraMuda' ? 'bg-4FD1C5' : 'bg-white' }}">
-                    <div class="text-white text-center d-flex align-items-center justify-content-center">
-                        <i class="fas fa-users {{ $activePage == 'DataWiraMuda' ? 'text-white' : 'text-4FD1C5' }}"
-                        style="font-size: 1rem;"></i>
+        @if (Auth::user()->role == 'Admin')
+            <li class="nav-item">
+                <a class="nav-link text-white {{ $activePage == 'DataWiraMuda' ? ' active-page' : '' }} "
+                    href="{{ route('wiramuda.index') }}">
+                    <div class="card {{ $activePage == 'DataWiraMuda' ? 'bg-4FD1C5' : 'bg-white' }}">
+                        <div class="text-white text-center d-flex align-items-center justify-content-center">
+                            <i class="fas fa-users {{ $activePage == 'DataWiraMuda' ? 'text-white' : 'text-4FD1C5' }}"
+                                style="font-size: 1rem;"></i>
+                        </div>
                     </div>
-            </div>
-            <span class="nav-link-text ms-1">Data Wirausaha Muda</span>
-            </a>
-        <li class="nav-item">
-            <a class="nav-link text-white {{ $activePage == 'dataOKP' ? ' active-page' : '' }} "
-                href="{{ route('dataOKP') }}">
-                <div class="card {{ $activePage == 'dataOKP' ? 'bg-4FD1C5' : 'bg-white' }}">
-                    <div class="text-white text-center d-flex align-items-center justify-content-center">
-                        <i class="fas fa-users {{ $activePage == 'dataOKP' ? 'text-white' : 'text-4FD1C5' }}"
-                        style="font-size: 1rem;"></i>
+                    <span class="nav-link-text ms-1">Data Wirausaha Muda</span>
+                </a>
+            <li class="nav-item">
+                <a class="nav-link text-white {{ $activePage == 'dataOKP' ? ' active-page' : '' }} "
+                    href="{{ route('dataOKP') }}">
+                    <div class="card {{ $activePage == 'dataOKP' ? 'bg-4FD1C5' : 'bg-white' }}">
+                        <div class="text-white text-center d-flex align-items-center justify-content-center">
+                            <i class="fas fa-users {{ $activePage == 'dataOKP' ? 'text-white' : 'text-4FD1C5' }}"
+                                style="font-size: 1rem;"></i>
+                        </div>
                     </div>
-                </div>
-                <span class="nav-link-text ms-1">Data OKP</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-white {{ $activePage == 'DataPemudaP' ? ' active-page' : '' }} "
-                href="{{ route('DataPemudaP') }}">
-                <div class="card {{ $activePage == 'DataPemudaP' ? 'bg-4FD1C5' : 'bg-white' }}">
-                    <div class="text-white text-center d-flex align-items-center justify-content-center">
-                        <i class="fas fa-users {{ $activePage == 'DataPemudaP' ? 'text-white' : 'text-4FD1C5' }}"
-                        style="font-size: 1rem;"></i>
+                    <span class="nav-link-text ms-1">Data OKP</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white {{ $activePage == 'DataPemudaP' ? ' active-page' : '' }} "
+                    href="{{ route('DataPemudaP') }}">
+                    <div class="card {{ $activePage == 'DataPemudaP' ? 'bg-4FD1C5' : 'bg-white' }}">
+                        <div class="text-white text-center d-flex align-items-center justify-content-center">
+                            <i class="fas fa-users {{ $activePage == 'DataPemudaP' ? 'text-white' : 'text-4FD1C5' }}"
+                                style="font-size: 1rem;"></i>
+                        </div>
                     </div>
-                </div>
-                <span class="nav-link-text ms-1">Data Pemuda Pelopor</span>
-            </a>
-        </li>
+                    <span class="nav-link-text ms-1">Data Pemuda Pelopor</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white {{ $activePage == 'DataUmum' ? ' active-page' : '' }} "
+                    href="{{ route('DataUmum') }}">
+                    <div class="card {{ $activePage == 'DataUmum' ? 'bg-4FD1C5' : 'bg-white' }}">
+                        <div class="text-white text-center  d-flex align-items-center justify-content-center">
+                            <i class="fas fa-users {{ $activePage == 'DataUmum' ? 'text-white' : 'text-4FD1C5' }}"
+                                style="font-size: 1rem;"></i>
+                        </div>
+                    </div>
+                    <span class="nav-link-text ms-1">Data Umum</span>
+                </a>
+            </li>
+            <li class="nav-item mt-3">
+                <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Event & Loker</h6>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white {{ $activePage == 'DataLoker' ? 'active-page' : '' }} "
+                    href="{{ route('DataLoker') }}">
+                    <div class="card {{ $activePage == 'DataLoker' ? 'bg-4FD1C5' : 'bg-white' }}">
+                        <div class="text-white text-center d-flex align-items-center justify-content-center">
+                            <i class="fas fa-user {{ $activePage == 'DataLoker' ? 'text-white' : 'text-4FD1C5' }}"
+                                style="font-size: 1rem;"></i>
+                        </div>
+                    </div>
+                    <span class="nav-link-text ms-1">Data Lowongan Kerja</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white {{ $activePage == 'DataEvent' ? ' active-page' : '' }} "
+                    href="{{ route('DataEvent') }}">
+                    <div class="card {{ $activePage == 'DataEvent' ? 'bg-4FD1C5' : 'bg-white' }}">
+                        <div class="text-white text-center d-flex align-items-center justify-content-center">
+                            <i class="fas fa-file {{ $activePage == 'DataEvent' ? 'text-white' : 'text-4FD1C5' }}"
+                                style="font-size: 1rem;"></i>
+                        </div>
+                    </div>
+                    <span class="nav-link-text ms-1">Data Event</span>
+                </a>
+            </li>
+            <hr style="border-top: 2px solid #ffffff;">
+            <li class="nav-item">
+                <a class="nav-link text-white {{ $activePage == 'Berita' ? ' active-page' : '' }}  "
+                    href="{{ route('Berita') }}">
+                    <div class="card {{ $activePage == 'Berita' ? 'bg-4FD1C5' : 'bg-white' }}">
+                        <div class="text-white text-center  d-flex align-items-center justify-content-center">
+                            <i class="fas fa-file {{ $activePage == 'Berita' ? 'text-white' : 'text-4FD1C5' }}"
+                                style="font-size: 1rem;"></i>
+                        </div>
+                    </div>
+                    <span class="nav-link-text ms-1">Berita</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white {{ $activePage == 'Ads' ? ' active-page' : '' }}  "
+                    href="{{ route('Ads') }}">
+                    <div class="card {{ $activePage == 'Ads' ? 'bg-4FD1C5' : 'bg-white' }}">
+                        <div class="text-white text-center d-flex align-items-center justify-content-center">
+                            <i class="fas fa-file {{ $activePage == 'Ads' ? 'text-white' : 'text-4FD1C5' }}"
+                                style="font-size: 1rem;"></i>
+                        </div>
+                    </div>
+                    <span class="nav-link-text ms-1">Ads Management</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white {{ $activePage == 'profile' ? ' active-page' : '' }}  "
+                    href="{{ route('profile') }}">
+                    <div class="card {{ $activePage == 'profile' ? 'bg-4FD1C5' : 'bg-white' }}">
+                        <div class="text-white text-center  d-flex align-items-center justify-content-center">
+                            <i class="fas fa-rocket {{ $activePage == 'profile' ? 'text-white' : 'text-4FD1C5' }}"
+                                style="font-size: 1rem;"></i>
+                        </div>
+                    </div>
+                    <span class="nav-link-text ms-1">Sign Up</span>
+                </a>
+            </li>
+        @endif
+
+        {{-- Sidebar Wirausaha Muda --}}
         <li class="nav-item">
-            <a class="nav-link text-white {{ $activePage == 'DataUmum' ? ' active-page' : '' }} "
-                href="{{ route('DataUmum') }}">
-                <div class="card {{ $activePage == 'DataUmum' ? 'bg-4FD1C5' : 'bg-white' }}">
+            <a class="nav-link text-white {{ $activePage == 'wiramuda.bio' ? ' active-page' : '' }}  "
+                href="{{ route('wiramuda.bio') }}">
+                <div class="card {{ $activePage == 'wiramuda.bio' ? 'bg-4FD1C5' : 'bg-white' }}">
                     <div class="text-white text-center  d-flex align-items-center justify-content-center">
-                        <i class="fas fa-users {{ $activePage == 'DataUmum' ? 'text-white' : 'text-4FD1C5' }}"
-                        style="font-size: 1rem;"></i>
+                        <i class="fas fa-rocket {{ $activePage == 'wiramuda.bio' ? 'text-white' : 'text-4FD1C5' }}"
+                            style="font-size: 1rem;"></i>
                     </div>
                 </div>
-                <span class="nav-link-text ms-1">Data Umum</span>
+                <span class="nav-link-text ms-1">Update Bio</span>
             </a>
         </li>
-        <li class="nav-item mt-3">
-            <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Event & Loker</h6>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-white {{ $activePage == 'DataLoker' ? 'active-page' : '' }} "
-                href="{{ route('DataLoker') }}">
-                <div class="card {{ $activePage == 'DataLoker' ? 'bg-4FD1C5' : 'bg-white' }}">
-                    <div class="text-white text-center d-flex align-items-center justify-content-center">
-                        <i class="fas fa-user {{ $activePage == 'DataLoker' ? 'text-white' : 'text-4FD1C5' }}"
-                        style="font-size: 1rem;"></i>
-                    </div>
-                </div>
-                <span class="nav-link-text ms-1">Data Lowongan Kerja</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-white {{ $activePage == 'DataEvent' ? ' active-page' : '' }} "
-                href="{{ route('DataEvent') }}">
-                <div class="card {{ $activePage == 'DataEvent' ? 'bg-4FD1C5' : 'bg-white' }}">
-                    <div class="text-white text-center d-flex align-items-center justify-content-center">
-                        <i class="fas fa-file {{ $activePage == 'DataEvent' ? 'text-white' : 'text-4FD1C5' }}"
-                        style="font-size: 1rem;"></i>
-                    </div>
-                </div>
-                <span class="nav-link-text ms-1">Data Event</span>
-            </a>
-        </li>
-        <hr style="border-top: 2px solid #ffffff;">
-        <li class="nav-item">
-            <a class="nav-link text-white {{ $activePage == 'Berita' ? ' active-page' : '' }}  "
-                href="{{ route('Berita') }}">
-                <div class="card {{ $activePage == 'Berita' ? 'bg-4FD1C5' : 'bg-white' }}">
-                    <div class="text-white text-center  d-flex align-items-center justify-content-center">
-                        <i class="fas fa-file {{ $activePage == 'Berita' ? 'text-white' : 'text-4FD1C5' }}"
-                        style="font-size: 1rem;"></i>
-                    </div>
-                </div>
-                <span class="nav-link-text ms-1">Berita</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-white {{ $activePage == 'Ads' ? ' active-page' : '' }}  "
-                href="{{ route('Ads') }}">
-                <div class="card {{ $activePage == 'Ads' ? 'bg-4FD1C5' : 'bg-white' }}">
-                    <div class="text-white text-center d-flex align-items-center justify-content-center">
-                        <i class="fas fa-file {{ $activePage == 'Ads' ? 'text-white' : 'text-4FD1C5' }}"
-                        style="font-size: 1rem;"></i>
-                    </div>
-                </div>
-                <span class="nav-link-text ms-1">Ads Management</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-white {{ $activePage == 'profile' ? ' active-page' : '' }}  "
-                href="{{ route('profile') }}">
-                <div class="card {{ $activePage == 'profile' ? 'bg-4FD1C5' : 'bg-white' }}">
-                    <div class="text-white text-center  d-flex align-items-center justify-content-center">
-                        <i class="fas fa-rocket {{ $activePage == 'profile' ? 'text-white' : 'text-4FD1C5' }}"
-                        style="font-size: 1rem;"></i>
-                    </div>
-                </div>
-                <span class="nav-link-text ms-1">Sign Up</span>
-            </a>
-        </li>
+        {{-- End Sidebar Wirausaha Muda --}}
     </ul>
 
 
