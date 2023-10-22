@@ -14,6 +14,14 @@ class data extends Model
     {
         return DB::table('datas')->where('id_user', Auth::users()->id)->get();
     }
+    public function detailData($id)
+    {
+        return DB::table('datas')->where('id_data', $id)->first();
+    }
+    public function jumlahData()
+    {
+        return DB::table('datas')->where('id_user', Auth::users()->id)->count();
+    }
     public function addData($data)
     {
         DB::table('datas')->insert($data);

@@ -20,7 +20,7 @@ class m_user extends Model
     }
     public function id($email)
     {
-        DB::table('users')->where('email', $email)->first();
+        return DB::table('users')->where('email', $email)->first();
     }
     public function deleteData($id)
     {
