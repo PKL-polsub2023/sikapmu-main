@@ -18,7 +18,19 @@
                                             <div class="input-group input-group-outline mt-3">
                                                 <label class="form-label">Username</label>
                                                 <input type="text" class="form-control" name="username"
+<<<<<<< HEAD
                                                     value="{{ old('username') }}">
+=======
+                                                    value="{{ old('username') }}" required>
+                                            </div>
+                                            @error('username')
+                                            <p class='text-danger inputerror'>{{ $message }} </p>
+                                            @enderror
+                                            <div class="input-group input-group-outline mt-3">
+                                                <label class="form-label">Name</label>
+                                                <input type="text" class="form-control" name="name"
+                                                    value="{{ old('name') }}" required>
+>>>>>>> bd24631c99becb8d5470cb238fd2c9e78b0544b6
                                             </div>
                                             @error('username')
                                             <p class='text-danger inputerror'>{{ $message }} </p>
@@ -34,21 +46,43 @@
                                             <div class="input-group input-group-outline mt-3">
                                                 <label class="form-label">Email</label>
                                                 <input type="email" class="form-control" name="email"
-                                                    value="{{ old('email') }}">
+                                                    value="{{ old('email') }}" required>
                                             </div>
                                             @error('email')
                                             <p class='text-danger inputerror'>{{ $message }} </p>
                                             @enderror
                                             <div class="input-group input-group-outline mt-3">
                                                 <label class="form-label">Password</label>
-                                                <input type="password" class="form-control" name="password">
+                                                <input type="password" class="form-control" name="password" required>
                                             </div>
                                             @error('password')
                                             <p class='text-danger inputerror'>{{ $message }} </p>
                                             @enderror
                                             <div class="input-group input-group-outline mt-3">
+<<<<<<< HEAD
                                                 <label class="form-label">Konfirmasi Password</label>
                                                 <input type="password" class="form-control" name="kpassword">
+=======
+                                                <label class="form-label">Kontak</label>
+                                                <input type="test" class="form-control" name="kontak" value="{{ old('kontak') }}" required>
+                                            </div>
+                                            <div class="input-group input-group-outline mt-3">
+                                                <select name="role"  class="form-control" required>
+                                                    <option selected disabled>Role</option>
+                                                    <option value="okp">Organisasi Kepemudaan</option>
+                                                    <option value="wm">Wirausaha Muda</option>
+                                                    <option value="pp">Pemuda Pelopor</option>
+                                                    <option value="u">Umum</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-check form-check-info text-start ps-0 mt-3">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault" checked>
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    I agree the <a href="javascript:;"
+                                                        class="text-dark font-weight-bolder">Terms and Conditions</a>
+                                                </label>
+>>>>>>> bd24631c99becb8d5470cb238fd2c9e78b0544b6
                                             </div>
                                             @error('kpassword')
                                             <p class='text-danger inputerror'>{{ $message }} </p>
