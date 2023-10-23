@@ -228,6 +228,237 @@
                     </div>
                 </div>
             </div>
+            <div class="container">
+                <div class="row mb-5 mx-5">
+
+                    <div class="col-4">
+                        <h1 class="text-center" style="color: rgb(0, 0, 0); font-size: 18px; font-weight: 100;">Data Pemuda
+                            Usia
+                            16 s.d 30th</h1>
+
+                        <canvas id="myChart" width="400" height="400"></canvas>
+                        <div class="card mt-3" style="border-radius: 10px;">
+                            <div class="row mx-1 mt-3 mb-3">
+                                <div class="col-1">
+                                    <div class="cards" style="background-color: #55BEEB; ">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <h1 style="color: rgb(12, 12, 12); font-size: 12px; font-weight: 100;">Utara 360 orang
+                                    </h1>
+                                </div>
+                                <div class="col-1">
+                                    <div class="cards" style="background-color: #F94144; ">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <h1 style="color: rgb(12, 12, 12); font-size: 12px; font-weight: 100;">Timur 260 orang
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="row mx-1 mt-1">
+                                <div class="col-1">
+                                    <div class="cards" style="background-color: #FFB320; ">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <h1 style="color: rgb(12, 12, 12); font-size: 12px; font-weight: 100;">Selatan 320 orang
+                                    </h1>
+                                </div>
+                                <div class="col-1">
+                                    <div class="cards" style="background-color: #5D5FEF; ">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <h1 style="color: rgb(12, 12, 12); font-size: 12px; font-weight: 100;">Barat 60 orang
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="row mt-3 ">
+                                <div class="col-1"></div>
+                                <div class="col-5">
+                                    <div class="text-start mx-4 mb-5">
+                                        <a class="btn text-start align-items-center" href="#"
+                                            style="background-color: #4C6FFF; text-align: center;">
+                                            <i class="text-white" style="text-transform: none; font-style: normal;">Detail
+                                                <i></i></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-5 ">
+                                    <div class="container text-center align-items-center">
+
+
+                                        <div class="row ">
+                                            <div class="col-2">
+                                                <i class="fas fa-user d-flex text-center align-items-center"
+                                                    style="font-size: 1rem;"></i>
+                                            </div>
+                                            <div class="col-8 d-flex text-center align-items-center">
+                                                <h1 class="d-flex text-center align-items-center"
+                                                    style="color: rgb(12, 12, 12); font-size: 12px; font-weight: bold;">100
+                                                </h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <h1 class="text-center" style="color: rgb(0, 0, 0); font-size: 18px; font-weight: 100;">Data
+                            Organisasi Kepemudaan</h1>
+
+                        <canvas id="myChart2" width="400" height="400"></canvas>
+                        <div class="card mt-3" style="border-radius: 10px;">
+                            <div class="row mx-1 mt-3 mb-3">
+                                <div class="col-1">
+                                    <div class="cards" style="background-color: #55BEEB; ">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <h1 style="color: rgb(12, 12, 12); font-size: 12px; font-weight: 100;">Utara 360 orang
+                                    </h1>
+                                </div>
+                                <div class="col-1">
+                                    <div class="cards" style="background-color: #F94144; ">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <h1 style="color: rgb(12, 12, 12); font-size: 12px; font-weight: 100;">Timur 260 orang
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="row mx-1 mt-1">
+                                <div class="col-1">
+                                    <div class="cards" style="background-color: #FFB320; ">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <h1 style="color: rgb(12, 12, 12); font-size: 12px; font-weight: 100;">Selatan 320
+                                        orang
+                                    </h1>
+                                </div>
+                                <div class="col-1">
+                                    <div class="cards" style="background-color: #5D5FEF; ">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <h1 style="color: rgb(12, 12, 12); font-size: 12px; font-weight: 100;">Barat 60 orang
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="row mt-3 ">
+                                <div class="col-1"></div>
+                                <div class="col-5">
+                                    <div class="text-start mx-4 mb-5">
+                                        <a class="btn text-start align-items-center" href="#"
+                                            style="background-color: #4C6FFF; text-align: center;">
+                                            <i class="text-white" style="text-transform: none; font-style: normal;">Detail
+                                                <i></i></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-5 ">
+                                    <div class="row ">
+                                        <div class="col-2">
+                                            <i class="fas fa-user d-flex text-center align-items-center"
+                                                style="font-size: 1rem;"></i>
+                                        </div>
+                                        <div class="col-8 d-flex text-center align-items-center">
+                                            <h1 class="d-flex text-center align-items-center"
+                                                style="color: rgb(12, 12, 12); font-size: 12px; font-weight: bold;">100
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <h1 class="text-center" style="color: rgb(0, 0, 0); font-size: 18px; font-weight: 100;">Data
+                            Kewirausahawan pemuda</h1>
+
+                        <canvas id="myChart3" width="400" height="400"></canvas>
+                        <div class="card mt-3" style="border-radius: 10px;">
+                            <div class="row mx-1 mt-3 mb-3">
+                                <div class="col-1">
+                                    <div class="cards" style="background-color: #55BEEB; ">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <h1 style="color: rgb(12, 12, 12); font-size: 12px; font-weight: 100;">Utara 360 orang
+                                    </h1>
+                                </div>
+                                <div class="col-1">
+                                    <div class="cards" style="background-color: #F94144; ">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <h1 style="color: rgb(12, 12, 12); font-size: 12px; font-weight: 100;">Timur 260 orang
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="row mx-1 mt-1">
+                                <div class="col-1">
+                                    <div class="cards" style="background-color: #FFB320; ">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <h1 style="color: rgb(12, 12, 12); font-size: 12px; font-weight: 100;">Selatan 320
+                                        orang
+                                    </h1>
+                                </div>
+                                <div class="col-1">
+                                    <div class="cards" style="background-color: #5D5FEF; ">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <h1 style="color: rgb(12, 12, 12); font-size: 12px; font-weight: 100;">Barat 60 orang
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="row mt-3 ">
+                                <div class="col-1"></div>
+                                <div class="col-5">
+                                    <div class="text-start mx-4 mb-5">
+                                        <a class="btn text-start align-items-center" href="#"
+                                            style="background-color: #4C6FFF; text-align: center;">
+                                            <i class="text-white" style="text-transform: none; font-style: normal;">Detail
+                                                <i></i></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-5 ">
+                                    <div class="row ">
+                                        <div class="col-2">
+                                            <i class="fas fa-user d-flex text-center align-items-center"
+                                                style="font-size: 1rem;"></i>
+                                        </div>
+                                        <div class="col-8 d-flex text-center align-items-center">
+                                            <h1 class="d-flex text-center align-items-center"
+                                                style="color: rgb(12, 12, 12); font-size: 12px; font-weight: bold;">100
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <x-footers.auth></x-footers.auth>
         </div>
     </main>
@@ -416,3 +647,54 @@ new Chart(ctx3, {
         </script>
     @endpush
 </x-layout>
+<script>
+    var data = {
+        datasets: [{
+            label: "Donut Chart",
+            data: [36, 25, 25, 14],
+            backgroundColor: ["#F94144", "#FFB320", "#5D5FEF", "#55BEEB"],
+        }, ],
+    };
+    var ctx = document.getElementById("myChart").getContext("2d");
+    var myChart = new Chart(ctx, {
+        type: "doughnut",
+        data: data,
+    });
+
+    var data2 = {
+        datasets: [{
+            label: "Donut Chart",
+            data: [53, 32, 25, 12],
+            backgroundColor: ["#F94144", "#FFB320", "#5D5FEF", "#55BEEB"],
+        }, ],
+    };
+    var ctx2 = document.getElementById("myChart2").getContext("2d");
+    var myChart2 = new Chart(ctx2, {
+        type: "doughnut",
+        data: data2,
+    });
+
+    var data3 = {
+        datasets: [{
+            label: "Donut Chart",
+            data: [13, 42, 25, 70],
+            backgroundColor: ["#F94144", "#FFB320", "#5D5FEF", "#55BEEB"],
+        }, ],
+    };
+    var ctx3 = document.getElementById("myChart3").getContext("2d");
+    var myChart2 = new Chart(ctx3, {
+        type: "doughnut",
+        data: data3,
+    });
+</script>
+<style>
+    .cards {
+        width: 10px;
+        /* Sesuaikan lebar kartu sesuai kebutuhan */
+        height: 10px;
+        /* Sesuaikan tinggi kartu sesuai kebutuhan */
+        border-radius: 50%;
+        /* Memberikan bentuk lingkaran dengan radius 50% */
+
+    }
+</style>

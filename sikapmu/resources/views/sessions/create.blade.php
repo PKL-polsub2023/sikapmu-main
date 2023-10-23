@@ -1,15 +1,32 @@
 <x-layout bodyClass="bg-gray-200">
+    <x-navbars.navs.navland signin='login' signup='register'></x-navbars.navs.navland>
+    <div class="container position-sticky z-index-sticky top-0">
+        <div class="row">
+            <div class="col-12">
+                <!-- Navbar -->
 
+<<<<<<< HEAD
+=======
     <div class="container position-sticky z-index-sticky top-0">
         <div class="row">
             <div class="col-12">
                 <!-- Navbar -->
                 <x-navbars.navs.guest signin='login' signup='register'></x-navbars.navs.guest>
+>>>>>>> bd24631c99becb8d5470cb238fd2c9e78b0544b6
                 <!-- End Navbar -->
             </div>
         </div>
     </div>
     <main class="main-content  mt-0">
+<<<<<<< HEAD
+        <div class="page-header min-vh-100">
+            <div class="container">
+                <h1 class="text-start mx-3" style="color: rgb(0, 0, 0); font-size: 18px; ">Login SIPanda</h1>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column me-auto me-lg-auto">
+                        <div class="card card-plain">
+
+=======
         <div class="page-header align-items-start min-vh-100"
             style="background-image: url('https://images.unsplash.com/photo-1497294815431-9365093b7331?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80');">
             <span class="mask bg-gradient-dark opacity-6"></span>
@@ -44,6 +61,7 @@
                                     </div>
                                 </div>
                             </div>
+>>>>>>> bd24631c99becb8d5470cb238fd2c9e78b0544b6
                             <div class="card-body">
                                 <form role="form" method="POST" action="{{ route('login') }}" class="text-start">
                                     @csrf
@@ -78,6 +96,16 @@
                                             me</label>
                                     </div>
                                     <div class="text-center">
+<<<<<<< HEAD
+                                        <button type="submit" class="btn w-100 my-4 mb-2" style="background-color: #0057FF;"><i class="text-sm text-white" >Sign Up</i></button>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="close"
+                                            class="btn btn-lg bg- btn-lg w-100 mt-4 mb-0" style="background-color: #000000;"><i class="text-sm text-white" >Kembali Ke Login</i></button>
+                                    </div>
+
+
+=======
                                         <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Sign
                                             in</button>
                                     </div>
@@ -91,12 +119,29 @@
                                         <a href="{{ route('verify') }}"
                                             class="text-primary text-gradient font-weight-bold">here</a>
                                     </p>
+>>>>>>> bd24631c99becb8d5470cb238fd2c9e78b0544b6
                                 </form>
                             </div>
                         </div>
                     </div>
+                    <div
+                                class="col-4 d-lg-flex d-none my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-end flex-column">
+                                <div class="position-relative   border-radius-lg d-flex flex-column justify-content-center">
+                                    <img src="{{ asset('assets/img/bg_up.png') }}" alt="profile-img" class="text-center" />
+                                </div>
+                            </div>
                 </div>
             </div>
+<<<<<<< HEAD
+
+        </div>
+    </main>
+    @push('js')
+        <script src="{{ asset('assets') }}/js/jquery.min.js"></script>
+        <script>
+            $(function() {
+
+=======
             <x-footers.guest></x-footers.guest>
         </div>
     </main>
@@ -105,6 +150,7 @@
         <script>
             $(function() {
 
+>>>>>>> bd24631c99becb8d5470cb238fd2c9e78b0544b6
                 var text_val = $(".input-group input").val();
                 if (text_val === "") {
                     $(".input-group").removeClass('is-filled');

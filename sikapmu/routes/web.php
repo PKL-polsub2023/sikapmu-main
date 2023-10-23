@@ -22,11 +22,33 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
 
+<<<<<<< HEAD
+Route::get('/', function () {
+    return view('pages.laravel-examples.landingpage');
+})->name('/');
+Route::get('landingokp', function () {
+    return view('pages.laravel-examples.landingokp');
+})->name('landingokp');
+Route::get('landingpemuda', function () {
+    return view('pages.laravel-examples.landingpemuda');
+})->name('landingpemuda');
+Route::get('landingloker', function () {
+    return view('pages.laravel-examples.landingloker');
+})->name('landingwiramuda');
+Route::get('landingwiramuda', function () {
+    return view('pages.laravel-examples.landingwiramuda');
+})->name('landingwiramuda');
+Route::get('landingberita', function () {
+    return view('pages.laravel-examples.landingberita');
+})->name('landingberita');
+Route::get('sign-up', function () {return redirect('sign-in');})->middleware('guest');
+=======
 use App\Http\Controllers\Admin\c_wiramuda;
 use App\Http\Controllers\Wiramuda\c_bio;
 use App\Http\Controllers\c_user_umum;
 
 Route::get('/', function () {return redirect('sign-in');})->middleware('guest');
+>>>>>>> bd24631c99becb8d5470cb238fd2c9e78b0544b6
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 Route::get('sign-up', [RegisterController::class, 'create'])->middleware('guest')->name('register');
 Route::post('sign-up', [RegisterController::class, 'store'])->middleware('guest');
@@ -44,6 +66,9 @@ Route::get('/reset-password/{token}', function ($token) {
 Route::post('sign-out', [SessionsController::class, 'destroy'])->name('logout');
 Route::get('profile', [ProfileController::class, 'create'])->name('profile');
 Route::post('user-profile', [ProfileController::class, 'update']);
+Route::get('landingpage', function () {
+    return view('pages.laravel-examples.landingpage');
+})->name('landingpage');
 Route::group(['middleware' => 'auth'], function () {
 	Route::get('billing', function () {
 		return view('pages.billing');
@@ -105,6 +130,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('addberita', function () {
 		return view('pages.laravel-examples.addberita');
 	})->name('addberita');
+
 });
 
 
