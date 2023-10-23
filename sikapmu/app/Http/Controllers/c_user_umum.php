@@ -20,53 +20,52 @@ class c_user_umum extends Controller
     //masuk menu updaet bio
     public function bio()
     {
-        $data = ['user' => $this->uu->detailData(Auth::users()->id)];
-        return view('umum/bio', $data);
+        $data = ['user' => $this->uu->detailData(Auth::user()->id)];
+        return view('umum/bio/index', $data);
     }
 
     //mengubah bio
     public function updatebio(Request $request)
     {
-        $id = Auth::users()->id;
+        $id = Auth::user()->id;
         $data = [
-            'nama' => $request->name,
-            'email' => $request->email,
+            'nama' => $request->nama,
             'kontak' => $request->kontak,
         ];
         $this->user->editData($id, $data);
         $data = [
             'ttl' => $request->ttl,
             'agama' => $request->agama,
-            'pendidikan_akhir' => $request->pendidikan_akhir,
+            'pendidikan_akhir' => $request->pendidikan,
             'alamat' => $request->alamat,
-            'kode_pos' => $request->kode_pos,
-            'status_nikah' => $request->status_nikah,
+            'kode_pos' => $request->pos,
+            'status_nikah' => $request->pernikahan,
         ];
         $this->uu->editData($id, $data);
         if ($request->foto <> null) {
-            $file  = $foto;
+            $file  = $request->foto;
             $filename = 'umum_'.$id.'.'.$file->extension();
             $file->move(public_path('foto/umum'),$filename);
             $data = ['foto' => $filename];
             $this->uu->editData($id, $data);
         }
-        //return Route umum
+        return redirect()->route('umum.bio');
     }
 
     //data dukung
     public function data()
     {
-        $data = ['user' => $this->data->allData(Auth::users()->id)];
+        $data = ['user' => $this->data->allData(Auth::user()->id)];
         return view('umum/data', $data);
     }
     public function tambahdata()
     {
-        $jumlah = $this->data->jumlahData(Auth::users()->id);
+        $jumlah = $this->data->jumlahData(Auth::user()->id);
         $file  = $data;
         $filename = 'umum_'.$id.'_'.$jumlah.'.'.$file->extension();
         $file->move(public_path('data'),$filename);
         $data = ['foto' => $filename,
-                 'id_user' => Auth::users()->id];
+                 'id_user' => Auth::user()->id];
         $this->addData($data);
         return view('umum/data', $data);
     }

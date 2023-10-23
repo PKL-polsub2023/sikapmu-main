@@ -55,7 +55,7 @@ class c_wiramuda extends Controller
                 'email' => $request->email,
                 'password' => Hash::make($request->password),
                 'kontak' => $request->kontak,
-                'role' => "Wirausaha Muda",
+                'role' => "wm",
             ];
             $this->user->addData($data);
             return response()->json(['success' => true]);

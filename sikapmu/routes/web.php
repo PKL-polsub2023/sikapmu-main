@@ -24,6 +24,7 @@ use App\Http\Controllers\SessionsController;
 
 use App\Http\Controllers\Admin\c_wiramuda;
 use App\Http\Controllers\Wiramuda\c_bio;
+use App\Http\Controllers\c_user_umum;
 
 Route::get('/', function () {return redirect('sign-in');})->middleware('guest');
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
@@ -127,3 +128,10 @@ Route::controller(c_bio::class)->group(function () {
 });
 
 // END WIRAUSAHA MUDA
+
+// User Umum
+Route::controller(c_user_umum::class)->group(function () {
+    Route::get('umum/bio', 'bio')->name('umum.bio');
+	Route::post('umum/updatebio', 'updatebio')->name('umum.updatebio');
+});
+// END User Umum
