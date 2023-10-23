@@ -218,7 +218,33 @@
         @endif
 
         @if (Auth::user()->role == 'u')
+        {{-- <li class="nav-item has-sub ">
+        <a href="#" class='nav-link text-white '>
+            <i class="bi bi-stack"></i>
+            <span>Data Master</span>
+        </a>
+        <ul class="submenu">
+            <li class="submenu-item">
+                <a href="#">Kategori</a>
+            </li>
+            <li class="submenu-item ">
+                <a href="#">Fasilitas</a>
+            </li> 
+        </ul>
+        </li> --}}
             {{-- Sidebar User Umum --}}
+        <li class="nav-item">
+            <a class="nav-link text-white {{ $activePage == 'umum.bio' ? ' active-page' : '' }}  "
+                href="{{ route('umum.bio') }}">
+                <div class="card {{ $activePage == 'umum.bio' ? 'bg-4FD1C5' : 'bg-white' }}">
+                    <div class="text-white text-center  d-flex align-items-center justify-content-center">
+                        <i class="fas fa-rocket {{ $activePage == 'umum.bio' ? 'text-white' : 'text-4FD1C5' }}"
+                            style="font-size: 1rem;"></i>
+                    </div>
+                </div>
+                <span class="nav-link-text ms-1">Update Bio</span>
+            </a>
+        </li>
         <li class="nav-item">
             <a class="nav-link text-white {{ $activePage == 'wiramuda.bio' ? ' active-page' : '' }}  "
                 href="{{ route('wiramuda.bio') }}">
