@@ -21,8 +21,11 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
+use App\Http\Controllers\Admin\c_wiramuda;
+use App\Http\Controllers\Wiramuda\c_bio;
+use App\Http\Controllers\c_user_umum;
+use App\Http\Controllers\c_data;
 
-<<<<<<< HEAD
 Route::get('/', function () {
     return view('pages.laravel-examples.landingpage');
 })->name('/');
@@ -42,13 +45,9 @@ Route::get('landingberita', function () {
     return view('pages.laravel-examples.landingberita');
 })->name('landingberita');
 Route::get('sign-up', function () {return redirect('sign-in');})->middleware('guest');
-=======
-use App\Http\Controllers\Admin\c_wiramuda;
-use App\Http\Controllers\Wiramuda\c_bio;
-use App\Http\Controllers\c_user_umum;
+
 
 Route::get('/', function () {return redirect('sign-in');})->middleware('guest');
->>>>>>> bd24631c99becb8d5470cb238fd2c9e78b0544b6
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 Route::get('sign-up', [RegisterController::class, 'create'])->middleware('guest')->name('register');
 Route::post('sign-up', [RegisterController::class, 'store'])->middleware('guest');
@@ -159,5 +158,11 @@ Route::controller(c_bio::class)->group(function () {
 Route::controller(c_user_umum::class)->group(function () {
     Route::get('umum/bio', 'bio')->name('umum.bio');
 	Route::post('umum/updatebio', 'updatebio')->name('umum.updatebio');
+});
+// Data Pendukung
+Route::controller(c_data::class)->group(function () {
+    Route::get('datadukung', 'index')->name('data');
+	Route::get('data/destroy/{id}', 'destroy')->name('data.destroy');
+	Route::post('data/store', 'store')->name('data.store');
 });
 // END User Umum

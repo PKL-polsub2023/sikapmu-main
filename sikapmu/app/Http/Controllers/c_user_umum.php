@@ -52,28 +52,5 @@ class c_user_umum extends Controller
         return redirect()->route('umum.bio');
     }
 
-    //data dukung
-    public function data()
-    {
-        $data = ['user' => $this->data->allData(Auth::user()->id)];
-        return view('umum/data', $data);
-    }
-    public function tambahdata()
-    {
-        $jumlah = $this->data->jumlahData(Auth::user()->id);
-        $file  = $data;
-        $filename = 'umum_'.$id.'_'.$jumlah.'.'.$file->extension();
-        $file->move(public_path('data'),$filename);
-        $data = ['foto' => $filename,
-                 'id_user' => Auth::user()->id];
-        $this->addData($data);
-        return view('umum/data', $data);
-    }
-    public function hapusdata($id)
-    {
-        $detail = $this->data->detailData($id);
-        unlink(public_path('data'). '/' .$detail->data);
-        $this->deleteData($id);
-        return view('umum/data', $data);
-    }
+   
 }
